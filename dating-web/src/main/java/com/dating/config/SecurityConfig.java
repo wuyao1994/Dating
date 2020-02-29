@@ -1,5 +1,6 @@
 package com.dating.config;
 
+import com.dating.util.MD5PasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -17,9 +18,10 @@ import com.dating.exception.JWTAuthenticationEntryPoint;
 import com.dating.filter.JWTAuthenticationFilter;
 import com.dating.filter.JWTAuthorizationFilter;
 import com.dating.service.impl.UserDetailsServiceImpl;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
- * @author shuang.kou
+ * @author elvis
  */
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -45,7 +47,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		// 设置自定义的userDetailsService以及密码编码器
 		auth.userDetailsService(userDetailsServiceImpl)
-				.passwordEncoder(bCryptPasswordEncoder());
+				.passwordEncoder(passwordEncoder());
+	}
+
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new MD5PasswordEncoder();
 	}
 
 	@Override

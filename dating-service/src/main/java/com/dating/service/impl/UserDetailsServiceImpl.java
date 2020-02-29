@@ -11,7 +11,7 @@ import com.dating.domain.UserExample;
 import com.dating.service.UserService;
 
 /**
- * @author shuang.kou
+ * @author elvis
  */
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

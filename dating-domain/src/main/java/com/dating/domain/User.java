@@ -1,6 +1,11 @@
 package com.dating.domain;
 
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 public class User {
     private Integer id;
@@ -38,6 +43,8 @@ public class User {
     private String profession;
 
     private String nickName;
+
+    private Integer isDelete;
 
     public Integer getId() {
         return id;
@@ -181,5 +188,19 @@ public class User {
 
     public void setNickName(String nickName) {
         this.nickName = nickName == null ? null : nickName.trim();
+    }
+
+    public Integer getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(Integer isDelete) {
+        this.isDelete = isDelete;
+    }
+
+    public List<SimpleGrantedAuthority> getRoles() {
+        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority("ROLE_" + role));
+        return authorities;
     }
 }

@@ -1,7 +1,7 @@
 package com.dating.constants;
 
 /**
- * @author shuang.kou
+ * @author elvis
  */
 public class SecurityConstants {
 

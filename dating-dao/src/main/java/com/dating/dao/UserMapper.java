@@ -1,11 +1,15 @@
 package com.dating.dao;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
 import com.dating.domain.User;
 import com.dating.domain.UserExample;
 import com.dating.domain.UserWithBLOBs;
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+@Mapper
 public interface UserMapper {
     long countByExample(UserExample example);
 

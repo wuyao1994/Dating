@@ -26,7 +26,7 @@ import io.jsonwebtoken.security.SignatureException;
 /**
  * 过滤器处理所有HTTP请求，并检查是否存在带有正确令牌的Authorization标头。例如，如果令牌未过期或签名密钥正确。
  *
- * @author shuang.kou
+ * @author elvis
  */
 public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 

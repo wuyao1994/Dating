@@ -18,7 +18,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 
 /**
- * @author shuang.kou
+ * @author elvis
  */
 public class JwtTokenUtils {
 

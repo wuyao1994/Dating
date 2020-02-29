@@ -9,7 +9,7 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 
 /**
- * @author shuang.kou
+ * @author elvis
  * AccessDeineHandler 用来解决认证过的用户访问无权限资源时的异常
  */
 public class JWTAccessDeniedHandler implements AccessDeniedHandler {
