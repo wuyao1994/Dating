@@ -3,9 +3,9 @@ spring:
   mvc:
     static-path-pattern: /static/**
   datasource:
-    url: jdbc:mysql://localhost:3306/dating?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://111.231.191.63:3306/dating?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
     username: root
-    password: password
+    password: 123abcABC
     driver-class-name: com.mysql.jdbc.Driver
 mybatis:
   mapper-locations: classpath:/mapper/*Mapper.xml
