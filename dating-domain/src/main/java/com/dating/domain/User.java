@@ -1,206 +1,216 @@
 package com.dating.domain;
 
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
 public class User {
-    private Integer id;
+	private Integer id;
 
-    private String username;
+	private String username;
 
-    private String password;
+	private String password;
 
-    private String salt;
+	private String salt;
 
-    private String email;
+	private String email;
 
-    private Date birthday;
+	private Date birthday;
 
-    private String location;
+	private String location;
 
-    private String mainPhotoUrl;
+	private String mainPhotoUrl;
 
-    private Date createTime;
+	private Date createTime;
 
-    private Date updateTime;
+	private Date updateTime;
 
-    private Integer age;
+	private Integer age;
 
-    private Double height;
+	private String sex;
 
-    private Double weight;
+	private Double height;
 
-    private String relationshipStatus;
+	private Double weight;
 
-    private String lookingFor;
+	private String relationshipStatus;
 
-    private String role;
+	private String lookingFor;
 
-    private String profession;
+	private String role;
 
-    private String nickName;
+	private String profession;
 
-    private Integer isDelete;
+	private String nickName;
 
-    public Integer getId() {
-        return id;
-    }
+	private Integer isDelete;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public void setUsername(String username) {
+		this.username = username == null ? null : username.trim();
+	}
 
-    public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public String getSalt() {
-        return salt;
-    }
+	public void setPassword(String password) {
+		this.password = password == null ? null : password.trim();
+	}
 
-    public void setSalt(String salt) {
-        this.salt = salt == null ? null : salt.trim();
-    }
+	public String getSalt() {
+		return salt;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public void setSalt(String salt) {
+		this.salt = salt == null ? null : salt.trim();
+	}
 
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public Date getBirthday() {
-        return birthday;
-    }
+	public void setEmail(String email) {
+		this.email = email == null ? null : email.trim();
+	}
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
+	public Date getBirthday() {
+		return birthday;
+	}
 
-    public String getLocation() {
-        return location;
-    }
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
 
-    public void setLocation(String location) {
-        this.location = location == null ? null : location.trim();
-    }
+	public String getLocation() {
+		return location;
+	}
 
-    public String getMainPhotoUrl() {
-        return mainPhotoUrl;
-    }
+	public void setLocation(String location) {
+		this.location = location == null ? null : location.trim();
+	}
 
-    public void setMainPhotoUrl(String mainPhotoUrl) {
-        this.mainPhotoUrl = mainPhotoUrl == null ? null : mainPhotoUrl.trim();
-    }
+	public String getMainPhotoUrl() {
+		return mainPhotoUrl;
+	}
 
-    public Date getCreateTime() {
-        return createTime;
-    }
+	public void setMainPhotoUrl(String mainPhotoUrl) {
+		this.mainPhotoUrl = mainPhotoUrl == null ? null : mainPhotoUrl.trim();
+	}
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
+	public Date getCreateTime() {
+		return createTime;
+	}
 
-    public Date getUpdateTime() {
-        return updateTime;
-    }
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
 
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
+	public Date getUpdateTime() {
+		return updateTime;
+	}
 
-    public Integer getAge() {
-        return age;
-    }
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
+	}
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+	public Integer getAge() {
+		return age;
+	}
 
-    public Double getHeight() {
-        return height;
-    }
+	public void setAge(Integer age) {
+		this.age = age;
+	}
 
-    public void setHeight(Double height) {
-        this.height = height;
-    }
+	public String getSex() {
+		return sex;
+	}
 
-    public Double getWeight() {
-        return weight;
-    }
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
 
-    public void setWeight(Double weight) {
-        this.weight = weight;
-    }
+	public Double getHeight() {
+		return height;
+	}
 
-    public String getRelationshipStatus() {
-        return relationshipStatus;
-    }
+	public void setHeight(Double height) {
+		this.height = height;
+	}
 
-    public void setRelationshipStatus(String relationshipStatus) {
-        this.relationshipStatus = relationshipStatus == null ? null : relationshipStatus.trim();
-    }
+	public Double getWeight() {
+		return weight;
+	}
 
-    public String getLookingFor() {
-        return lookingFor;
-    }
+	public void setWeight(Double weight) {
+		this.weight = weight;
+	}
 
-    public void setLookingFor(String lookingFor) {
-        this.lookingFor = lookingFor == null ? null : lookingFor.trim();
-    }
+	public String getRelationshipStatus() {
+		return relationshipStatus;
+	}
 
-    public String getRole() {
-        return role;
-    }
+	public void setRelationshipStatus(String relationshipStatus) {
+		this.relationshipStatus = relationshipStatus == null ? null
+				: relationshipStatus.trim();
+	}
 
-    public void setRole(String role) {
-        this.role = role == null ? null : role.trim();
-    }
+	public String getLookingFor() {
+		return lookingFor;
+	}
 
-    public String getProfession() {
-        return profession;
-    }
+	public void setLookingFor(String lookingFor) {
+		this.lookingFor = lookingFor == null ? null : lookingFor.trim();
+	}
 
-    public void setProfession(String profession) {
-        this.profession = profession == null ? null : profession.trim();
-    }
+	public String getRole() {
+		return role;
+	}
 
-    public String getNickName() {
-        return nickName;
-    }
+	public void setRole(String role) {
+		this.role = role == null ? null : role.trim();
+	}
 
-    public void setNickName(String nickName) {
-        this.nickName = nickName == null ? null : nickName.trim();
-    }
+	public String getProfession() {
+		return profession;
+	}
 
-    public Integer getIsDelete() {
-        return isDelete;
-    }
+	public void setProfession(String profession) {
+		this.profession = profession == null ? null : profession.trim();
+	}
 
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
-    }
+	public String getNickName() {
+		return nickName;
+	}
 
-    public List<SimpleGrantedAuthority> getRoles() {
-        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        authorities.add(new SimpleGrantedAuthority("ROLE_" + role));
-        return authorities;
-    }
+	public void setNickName(String nickName) {
+		this.nickName = nickName == null ? null : nickName.trim();
+	}
+
+	public Integer getIsDelete() {
+		return isDelete;
+	}
+
+	public void setIsDelete(Integer isDelete) {
+		this.isDelete = isDelete;
+	}
+
+	public List<SimpleGrantedAuthority> getRoles() {
+		List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+		authorities.add(new SimpleGrantedAuthority("ROLE_" + role));
+		return authorities;
+	}
 }

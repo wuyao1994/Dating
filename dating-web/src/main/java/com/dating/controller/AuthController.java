@@ -28,6 +28,6 @@ public class AuthController {
 		if (result == null) {
 			return new UserResult(UserResultConstant.FAILED, "account is already exist");
 		}
-		return result;
+		return new UserResult(UserResultConstant.SUCCESS, "register success");
 	}
 }

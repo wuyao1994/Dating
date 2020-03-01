@@ -26,7 +26,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
 		UserExample example = new UserExample();
 		UserExample.Criteria criteria = example.createCriteria();
-		criteria.andEmailEqualTo(name);
+		criteria.andUsernameEqualTo(name);
 		User user = userService.selectFirstByExampleWithBLOBs(example);
 		return new JwtUser(user);
 	}

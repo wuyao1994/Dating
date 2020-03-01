@@ -10,6 +10,8 @@ public enum UserResultConstant {
 
 	SUCCESS(1, "success"),
 
+	MATCH_SUCCESS(520, "match success"),
+
 	INVALID_LENGTH(10001, "Invalid length"),
 
 	EMPTY_USERNAME(10101, "Username cannot be empty"),
